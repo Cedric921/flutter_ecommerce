@@ -8,12 +8,17 @@ class SecondWidget extends StatefulWidget {
 }
 
 class _SecondWidgetState extends State<SecondWidget> {
-  int increment = 0;
+  int increment = 1;
+
+  void _increment() {
+    increment++;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed:  _increment,
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
@@ -21,16 +26,16 @@ class _SecondWidgetState extends State<SecondWidget> {
       ),
       body: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("Vous venez de cliquer "),
             const SizedBox(
               height: 10,
             ),
-            Text("$increment",
-             style:  const TextStyle(
-                fontSize: 50,
-                fontWeight: FontWeight.bold
-              ),
+            Text(
+              "$increment",
+              style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
             ),
           ],
         ),
