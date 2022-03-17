@@ -11,7 +11,9 @@ class _SecondWidgetState extends State<SecondWidget> {
   int increment = 1;
 
   void _increment() {
-    increment++;
+    setState(() {
+      increment++;
+    });
   }
 
   @override
