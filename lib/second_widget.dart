@@ -8,39 +8,29 @@ class SecondWidget extends StatefulWidget {
 }
 
 class _SecondWidgetState extends State<SecondWidget> {
-  int increment = 1;
-
-  void _increment() {
-    setState(() {
-      increment++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed:  _increment,
-        child: const Icon(Icons.add),
-      ),
       appBar: AppBar(
-        title: const Text("c-store"),
-      ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("Vous venez de cliquer "),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              "$increment",
-              style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
-            ),
-          ],
+        title: const Text('C-store Home'),
+        leading:  IconButton(
+          onPressed: () {}, 
+          icon: const Icon(Icons.menu)
         ),
+        actions: [
+          IconButton(
+            onPressed: () {}, 
+            icon: const Icon(Icons.video_call)
+          ),
+          IconButton(
+            onPressed: () {}, 
+            icon: const Icon(Icons.call)
+          ),
+          IconButton(
+            onPressed: () {}, 
+            icon: const Icon(Icons.menu_book)
+          ),
+        ],
       ),
     );
   }
