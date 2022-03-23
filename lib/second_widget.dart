@@ -12,7 +12,7 @@ class _SecondWidgetState extends State<SecondWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('C-store Home'),
+        title: const Text('C-store'),
         leading:  IconButton(
           onPressed: () {}, 
           icon: const Icon(Icons.menu)
